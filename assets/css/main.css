@@ -1679,8 +1679,8 @@ input, select, textarea {
     direction: rtl;
 }
 
-/* اصلاح راست‌چین کردن Haneul بدون تغییر کل هدر */
-#haneul #haneul p #haneul h2 {
-    text-align: right;
+/* ======== راست‌چین کردن فقط باکس haneul ======== */
+#haneul, #haneul p, #haneul h2 {
     direction: rtl;
+    text-align: right;
 }
