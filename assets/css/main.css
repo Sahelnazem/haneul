@@ -1680,7 +1680,7 @@ input, select, textarea {
 }
 
 /* اصلاح راست‌چین کردن Haneul بدون تغییر کل هدر */
-#header .content .inner h1 {
+#haneul #haneul p #haneul h2 {
     text-align: right;
     direction: rtl;
 }
