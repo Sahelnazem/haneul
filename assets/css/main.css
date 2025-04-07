@@ -1684,3 +1684,52 @@ input, select, textarea {
     direction: rtl;
     text-align: right;
 }
+
+.product-tabs {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Tajawal", sans-serif;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: #fff;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.tab:hover, .tab.active {
+  background: #333;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  animation: fade 0.5s ease-in-out;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
