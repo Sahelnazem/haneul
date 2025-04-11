@@ -1760,21 +1760,4 @@ input, select, textarea {
     transform: scale(1.05);
 }
 
-.category-list button,
-.category-list a {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: white !important;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.6em 1em;
-    border-radius: 0.5em;
-    transition: all 0.3s ease;
-}
 
-.category-list button:hover,
-.category-list a:hover {
-    color: #ffd6f2; /* یه رنگ صورتی جذاب هنگام هاور */
-    transform: scale(1.05);
-}
