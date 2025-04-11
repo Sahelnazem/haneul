@@ -392,14 +392,20 @@
               </div>
           
           
-          <script>
-            function showCategory(categoryId) {
-              document.querySelectorAll('.product-category').forEach(cat => cat.classList.remove('active'));
-              const el = document.getElementById(categoryId);
-              if (el) el.classList.add('active');
-              el.scrollIntoView({ behavior: 'smooth' });
-            }
-          </script>
+         <script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
           
         </article>
 
