@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-    Dimension by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
   <head>
     <title>Dimension by HTML5 UP</title>
@@ -90,14 +86,14 @@
          
             <section class="categories">
               <h3>دسته‌بندی محصولات</h3>
-              <div class="category-tabs">
-                <button onclick="showCategory('women')">👗 زنانه</button>
-                <button onclick="showCategory('men')">👕 مردانه</button>
-                <button onclick="showCategory('bags')">👛 کیف</button>
-                <button onclick="showCategory('accessories')">💍 اکسسوری</button>
-                <button onclick="showCategory('shoes')">👠 کفش</button>
-                <button onclick="showCategory('perfume')">🫧 عطر</button>
-                <button onclick="showCategory('beauty')">💄 آرایشی</button>
+               <div class="category-tabs">
+      <button data-category="women">👗 زنانه</button>
+      <button data-category="men">👕 مردانه</button>
+      <button data-category="bags">👛 کیف</button>
+      <button data-category="shoes">👠 کفش</button>
+      <button data-category="accessories">💍 اکسسوری</button>
+      <button data-category="perfume">🫧 عطر</button>
+      <button data-category="cosmetics">💄 آرایشی</button>
               </div>
             </section>
           
@@ -107,7 +103,7 @@
                 <div class="product-card">
                   <span class="image main"><img src="images/pic08.jpg" alt="" /></span>
                   <p>Trench Coat</p>
-                  <p> بها: 153,00AED | رنگ: طوسی| سایز:S/M/L/XL </p>
+                  <p> بها: 153,00AED </p>
                     <select id="color1">
   <option>طوسی</option>
 </select>
@@ -121,37 +117,111 @@
 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
-                  <button>افزودن به سبد خرید</button>
 
                   <span class="image main"><img src="images/pic09.jpg" alt="" /></span>
                   <p>Denim Jacket</p>
-                  <p> بها: 108,00AED | رنگ: سورمه ای/ پلنگی| سایز:XS/S/M/L/XL </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 108,00AED </p>
+                 <select id="color1">
+  <option>سورمه ای</option>
+                      <option>پلنگی</option>
+</select>
 
+<select id="size1">
+    <option>XS</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+<option>XL</option></select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
                   <span class="image main"><img src="images/pic10.jpg" alt="" /></span>
                   <p>Boho Women Hat</p>
-                  <p> بها: 22,00AED | رنگ: مشکی | سایز:one-size </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 22,00AED </p>
+                  <select id="color1">
+  <option>مشکی</option>
+</select>
+
+<select id="size1">
+    <option>one-size</option>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
 
                   <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
                   <p>Cardigan</p>
-                  <p> بها: 52,00AED | رنگ: طوسی/کرمی/ مشکی/ قهوه ای/ زرد| سایز:XS/S/M/L/XL </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 52,00AED </p>
+                   <select id="color1">
+  <option>مشکی</option>
+                      <option>طوسی</option>
+                         <option>قهوه ای</option>
+                         <option>کرمی</option>
+                         <option>زرد</option>
+</select>
+
+<select id="size1">
+    <option>XS</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+<option>XL</option></select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
                   
                   <span class="image main"><img src="images/pic12.jpg" alt="" /></span>
                   <p>Coat and Skirt Set</p>
-                  <p> بها: 182,00AED | رنگ: مشکی | سایز: S/M/L </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 182,00AED </p>
+                 <select id="color1">
+  <option>مشکی</option>
+</select>
+
+<select id="size1">
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+</select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
 
                   <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
                   <p>Leather Jacket</p>
-                  <p> بها: 90,00AED | رنگ:زرشکی | سایز: S/M/L </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 90,00AED </p>
+                  <select id="color1">
+  <option>زرشکی</option>
+</select>
+
+<select id="size1">
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+</select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
 
                   <span class="image main"><img src="images/pic14.jpg" alt="" /></span> 
                   <p>Crop Coat</p> 
-                  <p> بها: 80,00AED | رنگ:شتری | سایز: S/M/L </p>
-                  <button>افزودن به سبد خرید</button>
+                  <p> بها: 80,00AED </p>
+                 <select id="color1">
+  <option>شتری</option>
+</select>
+
+<select id="size1">
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+</select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
                 </div>
               </div>
           
