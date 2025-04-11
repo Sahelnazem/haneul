@@ -108,6 +108,19 @@
                   <span class="image main"><img src="images/pic08.jpg" alt="" /></span>
                   <p>Trench Coat</p>
                   <p> بها: 153,00AED | رنگ: طوسی| سایز:S/M/L/XL </p>
+                    <select id="color1">
+  <option>طوسی</option>
+</select>
+
+<select id="size1">
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+<option>XL</option></select>
+
+<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+  افزودن به سبد خرید
+</button>
                   <button>افزودن به سبد خرید</button>
 
                   <span class="image main"><img src="images/pic09.jpg" alt="" /></span>
@@ -390,68 +403,135 @@
         
                 </div>
               </div>
-          <style>
-              /* =========================== دسته‌بندی محصولات Haneul =========================== */
-.category-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
-  padding: 1rem;
-}
+        <!-- نسخه ارتقا یافته بخش Haneul با سبد خرید درون‌صفحه‌ای، حذف بک‌گراندها، دکمه‌های صورتی، انتخاب رنگ و سایز -->
 
-.category-tabs button {
-  background: transparent !important;
-  color: white !important;
-  border: none !important;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.8rem 1.4rem;
-  border-radius: 0.6rem;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 0 0 3px rgba(255,255,255,0.2);
-}
+<style>
+  .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .category-tabs button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.4rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .category-tabs button:hover {
+    color: #ffb6e6;
+    transform: scale(1.05);
+    text-shadow: 0 0 8px #ffb6e6;
+  }
 
-.category-tabs button:hover {
-  color: #ffb6e6;
-  transform: scale(1.05);
-  text-shadow: 0 0 8px #ffb6e6;
-}
+  .product-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .product-card img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .product-options {
+    margin: 0.5rem auto;
+  }
+  .product-options select {
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    margin: 0.2rem;
+  }
+  .add-to-cart {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .add-to-cart:hover {
+    background: #ff94ca;
+  }
 
-/* =========================== کارت محصول =========================== */
-.product-card {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  padding: 1rem;
-  text-align: center;
-}
+  #cart {
+    background: #fefefe;
+    color: #333;
+    padding: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+  }
+  .cart-item button {
+    background: transparent;
+    border: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
 
-.product-card .image.main img {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  border-radius: 1rem;
-  width: 100%;
-  height: auto;
-}
-          </style>
-          
-         <script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.tab-content');
+<div id="haneul-cart-section">
+  <h3 style="text-align:center">🛍️ سبد خرید شما</h3>
+  <div id="cart"></div>
+</div>
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+<script>
+  const cartItems = [];
 
-      tab.classList.add('active');
-      document.getElementById(tab.dataset.target).classList.add('active');
+  function addToCart(name, price, colorId, sizeId) {
+    const color = document.getElementById(colorId)?.value || 'ندارد';
+    const size = document.getElementById(sizeId)?.value || 'ندارد';
+    const item = { name, price, color, size };
+    cartItems.push(item);
+    renderCart();
+  }
+
+  function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    renderCart();
+  }
+
+  function renderCart() {
+    const cartDiv = document.getElementById("cart");
+    cartDiv.innerHTML = '';
+    if (cartItems.length === 0) {
+      cartDiv.innerHTML = '<p>سبد خرید خالی است.</p>';
+      return;
+    }
+    let total = 0;
+    cartItems.forEach((item, index) => {
+      total += item.price;
+      cartDiv.innerHTML += `
+        <div class="cart-item">
+          <span>${item.name} | رنگ: ${item.color} | سایز: ${item.size}</span>
+          <span>${item.price.toLocaleString()} درهم</span>
+          <button onclick="removeFromCart(${index})">❌</button>
+        </div>
+      `;
     });
-  });
+    cartDiv.innerHTML += `<hr><p style="text-align:center;font-weight:bold">جمع کل: ${total.toLocaleString()} درهم</p>`;
+  }
 </script>
+
           
         </article>
 
