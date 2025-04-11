@@ -390,7 +390,53 @@
         
                 </div>
               </div>
-          
+          <style>
+              /* =========================== دسته‌بندی محصولات Haneul =========================== */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.category-tabs button {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1.4rem;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 3px rgba(255,255,255,0.2);
+}
+
+.category-tabs button:hover {
+  color: #ffb6e6;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #ffb6e6;
+}
+
+/* =========================== کارت محصول =========================== */
+.product-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-card .image.main img {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+          </style>
           
          <script>
   const tabs = document.querySelectorAll('.tab');
