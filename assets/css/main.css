@@ -1753,3 +1753,29 @@ input, select, textarea {
 .product-item img:hover {
   box-shadow: 0 0 30px rgba(255, 105, 180, 0.6); /* صورتی پررنگ‌تر موقع هاور */
 }
+
+
+/* باکس دکمه افزودن به سبد خرید */
+.add-to-cart {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 182, 193, 0.5); /* صورتی کمرنگ */
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.3); /* نور صورتی ملایم */
+  transition: all 0.3s ease;
+}
+
+/* افکت هاور که نور بیشتر شه */
+.add-to-cart:hover {
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6); /* صورتی پرنورتر */
+  border-color: rgba(255, 105, 180, 0.7);
+  color: #fff;
+  background-color: rgba(255, 182, 193, 0.1);
+}
