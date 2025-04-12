@@ -227,7 +227,7 @@
                 </div>
               </div>
           
-              <div id="men" class="product-category hidden">
+              <div id="men" class="product-category">
                 <h3>👕 محصولات مردانه</h3>
                 <div class="product-card">
                   <span class="image main"><img src="images/pic15.jpg" alt="" /></span> 
@@ -252,7 +252,7 @@
 
                   <span class="image main"><img src="images/pic16.jpg" alt="" /></span> 
                   <p>Plain Men Overcoat</p> 
-                  <p> بها: 141,00AED | رنگ: مشکی/ کرمی/ قهوه ای | سایز: XS/S/M/L/XL/XXL </p>
+                  <p> بها: 141,00AED </p>
                 <select id="color1">
   <option> مشکی سفید</option>
                     
@@ -273,7 +273,7 @@
 
                   <span class="image main"><img src="images/pic17.jpg" alt="" /></span> 
                   <p>Cap</p> 
-                  <p> بها: 19,00AED | رنگ: مشکی/ کرمی/ قهوه ای/ سفید/ سبز/ سورمه ای | سایز: one-size </p>
+                  <p> بها: 19,00AED  </p>
                 <select id="color1">
   <option> مشکی سفید</option>
                     
@@ -357,7 +357,7 @@
                 </div>
               </div>
           
-              <div id="bags" class="product-category hidden">
+              <div id="bags" class="product-category">
                 <h3>👛 کیف</h3>
                 <div class="product-card">
                   <span class="image main"><img src="images/pic42.jpg" alt="" /></span> 
@@ -513,7 +513,7 @@
                 </div>
               </div>
           
-              <div id="shoes" class="product-category hidden">
+              <div id="shoes" class="product-category">
                 <h3>👠 کفش</h3>
                 <div class="product-card">
                   <span class="image main"><img src="images/pic28.jpg" alt="" /></span> 
@@ -651,7 +651,7 @@
                 </div>
               </div>
           
-              <div id="perfume" class="product-category hidden">
+              <div id="perfume" class="product-category">
                 <h3>🫧 عطر</h3>
                 <div class="product-card">
                  
@@ -715,7 +715,7 @@
                 </div>
               </div>
           
-              <div id="beauty" class="product-category hidden">
+              <div id="beauty" class="product-category">
                 <h3>💄 آرایشی</h3>
                 <div class="product-card">
                   <span class="image main"><img src="images/pic20.jpg" alt="" /></span> 
@@ -786,133 +786,53 @@
                 </div>
               </div>
        
-
 <style>
-  .category-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
+  .product-category { display: none; }
+  .product-category.active { display: block; animation: fade 0.4s ease-in-out; }
+  .product-card { background: #eee; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; }
   .category-tabs button {
     background: transparent;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.8rem 1.4rem;
-    border-radius: 0.6rem;
-    transition: all 0.3s ease-in-out;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
   }
   .category-tabs button:hover {
-    color: #ffb6e6;
-    transform: scale(1.05);
-    text-shadow: 0 0 8px #ffb6e6;
-  }
-
-  .product-card {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .product-card img {
-    width: 100%;
-    border-radius: 1rem;
-  }
-  .product-options {
-    margin: 0.5rem auto;
-  }
-  .product-options select {
-    padding: 0.4rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    margin: 0.2rem;
-  }
-  .add-to-cart {
     background: #ff69b4;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    color: white;
   }
-  .add-to-cart:hover {
-    background: #ff94ca;
-  }
-
-  #cart {
-    background: #fefefe;
-    color: #333;
-    padding: 1rem;
-    max-width: 500px;
-    margin: 2rem auto;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .cart-item {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 0.5rem;
-  }
-  .cart-item button {
-    background: transparent;
-    border: none;
-    color: red;
-    font-weight: bold;
-    cursor: pointer;
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 
-<div id="haneul-cart-section">
-  <h3 style="text-align:center">🛍️ سبد خرید شما</h3>
-  <div id="cart"></div>
-</div>
-
 <script>
-    // دسته‌بندی محصولات
-    document.querySelectorAll('.category-tabs button').forEach(button => {
-      button.addEventListener('click', () => {
-        const category = button.getAttribute('data-category');
-        const products = document.querySelectorAll('.product-card');
+  const buttons = document.querySelectorAll('.category-tabs button');
+  const categories = document.querySelectorAll('.product-category');
 
-        products.forEach(product => {
-          if (category === 'all' || product.classList.contains(`category-${category}`)) {
-            product.style.display = 'block';
-          } else {
-            product.style.display = 'none';
-          }
-        });
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-category');
+      categories.forEach(cat => {
+        if (cat.id === target) {
+          cat.classList.add('active');
+        } else {
+          cat.classList.remove('active');
+        }
       });
     });
+  });
 
-    // افزودن به سبد خرید
-    const cartItems = document.querySelector('.cart-items');
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-      button.addEventListener('click', (e) => {
-        const product = e.target.closest('.product-card');
-        const title = product.querySelector('h3').innerText;
-        const color = product.querySelectorAll('select')[0].value;
-        const size = product.querySelectorAll('select')[1].value;
+  // پیش‌فرض هیچ دسته‌ای نمایش داده نشود
+  window.addEventListener('DOMContentLoaded', () => {
+    categories.forEach(cat => cat.classList.remove('active'));
+  });
+</script>
 
-        const li = document.createElement('li');
-        li.innerHTML = `${title} - رنگ: ${color} - سایز: ${size} <button class="remove">❌</button>`;
-
-        cartItems.appendChild(li);
-
-        li.querySelector('.remove').addEventListener('click', () => {
-          li.remove();
-        });
-      });
-    });
-  </script>
           
         </article>
 
