@@ -399,3 +399,10 @@
 					});
 
 })(jQuery);
+function openCart() {
+  document.getElementById("sideCart").classList.add("active");
+}
+
+function closeCart() {
+  document.getElementById("sideCart").classList.remove("active");
+}
