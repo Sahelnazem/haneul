@@ -1725,3 +1725,31 @@ input, select, textarea {
 .product img:hover {
     transform: scale(1.05);
 }
+/* حذف بک‌گراند کارت‌های محصول */
+.product-card,
+.product,
+.card,
+.product-item {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* استایل نورانی صورتی برای عکس‌های محصول */
+.product-card img,
+.product img,
+.card img,
+.product-item img {
+  border-radius: 16px;
+  border: 2px solid rgba(255, 182, 193, 0.5); /* صورتی کم‌رنگ */
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4); /* افکت نورانی صورتی */
+  transition: all 0.3s ease;
+}
+
+/* حالت هاور که نور بیشتر شه */
+.product-card img:hover,
+.product img:hover,
+.card img:hover,
+.product-item img:hover {
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.6); /* صورتی پررنگ‌تر موقع هاور */
+}
