@@ -1779,3 +1779,40 @@ input, select, textarea {
   color: #fff;
   background-color: rgba(255, 182, 193, 0.1);
 }
+
+/* عنوان دسته‌بندی‌ها */
+.product-category-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffccf9;
+  font-weight: 600;
+  font-family: 'Vazirmatn', sans-serif; /* اگه فونت خاص می‌خوای می‌تونم برات اضافه کنم */
+  margin-bottom: 15px;
+}
+
+/* لی‌آوت دکمه‌های دسته‌بندی */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* استایل دکمه‌های دسته‌بندی */
+.category-buttons button {
+  background: rgba(255, 182, 193, 0.08);
+  border: 1px solid rgba(255, 192, 203, 0.5);
+  color: white;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.2);
+}
+
+.category-buttons button:hover {
+  background: rgba(255, 182, 193, 0.2);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
