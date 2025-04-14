@@ -1688,7 +1688,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         </article>
       </div>
 
-      <!-- Footer -->
+       <!-- Footer -->
       <footer id="footer"></footer>
     </div>
 
@@ -1696,44 +1696,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <div id="bg"></div>
 
     <!-- Scripts -->
-  
-    <!-- اسکریپت Firebase -->
-    <script src="assets/js/firebase.js"></script>
-    <script src="assets/js/main.js"></script>
-
     <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 
-<script>
-  // مقداردهی اولیه Firebase
-  const firebaseConfig = {
-    apiKey: "اینجا APIKEY پروژه‌ت",
-    authDomain: "your-project.firebaseapp.com",
-    projectId: "your-project",
-    appId: "APP_ID"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-
-  // توابع ورود و ثبت‌نام
-  function toggleForm() {
-    const login = document.getElementById('loginBox');
-    const signup = document.getElementById('signupBox');
-    login.style.display = login.style.display === 'none' ? 'block' : 'none';
-    signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
-  }
-
-  function loginUser() {
-    const email = document.getElementById('loginEmail').value;
-    const pass = document.getElementById('loginPassword').value;
-    auth.signInWithEmailAndPassword(email, pass)
-      .then(user => alert('ورود موفق!'))
-      .catch(err => alert('خطا: ' + err.message));
-  }
-
- 
-</script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
      </body>
 </html>
