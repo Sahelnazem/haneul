@@ -400,3 +400,19 @@
 
 })(jQuery);
 
+// نمایش سبد خرید فقط برای کاربران واردشده
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.auth) {
+    auth.onAuthStateChanged((user) => {
+      const cartBox = document.querySelector(".cart-slide");
+      if (cartBox) {
+        if (user) {
+          cartBox.style.display = "block";
+        } else {
+          cartBox.style.display = "none";
+        }
+      }
+    });
+  }
+});
+
