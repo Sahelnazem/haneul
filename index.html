@@ -85,23 +85,23 @@
 <P> قیمت ها با احترام بدون باربری هستند.💕</P>
 
           <!-- فرم ورود / ثبت‌نام -->
-<section id="auth-section">
-  <div id="loginBox" class="form-box">
-    <h2>ورود به حساب</h2>
-    <input type="email" id="loginEmail" placeholder="ایمیل">
-    <input type="password" id="loginPassword" placeholder="رمز عبور">
-    <button onclick="loginUser()">ورود</button>
-    <div class="toggle" onclick="toggleForm()">ثبت‌نام نکردی؟ کلیک کن!</div>
-  </div>
+          <section id="auth-section">
+            <div id="loginBox" class="form-box">
+              <h2>ورود به حساب</h2>
+              <input type="email" id="loginEmail" placeholder="ایمیل">
+              <input type="password" id="loginPassword" placeholder="رمز عبور">
+              <button onclick="loginUser()">ورود</button>
+              <div class="toggle" onclick="toggleForm()">ثبت‌نام نکردی؟ کلیک کن!</div>
+            </div>
 
-  <div id="signupBox" class="form-box" style="display: none;">
-    <h2>ثبت‌نام</h2>
-    <input type="email" id="signupEmail" placeholder="ایمیل">
-    <input type="password" id="signupPassword" placeholder="رمز عبور">
-    <button onclick="signupUser()">ثبت‌نام</button>
-    <div class="toggle" onclick="toggleForm()">حساب داری؟ ورود</div>
-  </div>
-</section>
+            <div id="signupBox" class="form-box" style="display: none;">
+              <h2>ثبت‌نام</h2>
+              <input type="email" id="signupEmail" placeholder="ایمیل">
+              <input type="password" id="signupPassword" placeholder="رمز عبور">
+              <button onclick="signupUser()">ثبت‌نام</button>
+              <div class="toggle" onclick="toggleForm()">حساب داری؟ ورود</div>
+            </div>
+          </section>
             <section class="categories">
              <h3 class="product-category-title">🛍 دسته‌بندی محصولات</h3>
                <div class="category-tabs">
@@ -808,8 +808,27 @@
                 </div>
               </div>
 
-             
-              
+        <div class="cart-slide" style="display: none;">
+  <h2>🛒 سبد خرید</h2>
+  <ul id="cart-items"></ul>
+</div>     
+
+              <style>
+      .form-box h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .category-tabs button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+      }
+      .category-tabs h3 {
+        font-size: 1.1rem;
+        color: #fff;
+      }
+    </style>
 <style>
   .product-category { display: none; }
   .product-category.active { display: block; animation: fade 0.4s ease-in-out; }
@@ -1727,12 +1746,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
   }
 
   function signupUser() {
-    const email = document.getElementById('signupEmail').value;
-    const pass = document.getElementById('signupPassword').value;
-    auth.createUserWithEmailAndPassword(email, pass)
-      .then(user => alert('ثبت‌نام موفق!'))
-      .catch(err => alert('خطا: ' + err.message));
-  }
+  const email = document.getElementById('signupEmail').value;
+  const pass = document.getElementById('signupPassword').value;
+  auth.createUserWithEmailAndPassword(email, pass)
+    .then(user => alert('ثبت‌نام موفق!'))
+    .catch(err => alert('خطا: ' + err.message));
+}
 </script>
   </body>
+ 
+ <!-- اسکریپت‌های پروژه -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/main.js"></script>
 </html>
