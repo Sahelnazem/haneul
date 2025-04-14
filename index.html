@@ -85,23 +85,23 @@
 <P> قیمت ها با احترام بدون باربری هستند.💕</P>
 
           <!-- فرم ورود / ثبت‌نام -->
-          <section id="auth-section">
-            <div id="loginBox" class="form-box">
-              <h2>ورود به حساب</h2>
-              <input type="email" id="loginEmail" placeholder="ایمیل">
-              <input type="password" id="loginPassword" placeholder="رمز عبور">
-              <button onclick="loginUser()">ورود</button>
-              <div class="toggle" onclick="toggleForm()">ثبت‌نام نکردی؟ کلیک کن!</div>
-            </div>
+<section id="auth-section">
+  <div id="loginBox" class="form-box">
+    <h2>ورود به حساب</h2>
+    <input type="email" id="loginEmail" placeholder="ایمیل">
+    <input type="password" id="loginPassword" placeholder="رمز عبور">
+    <button onclick="loginUser()">ورود</button>
+    <div class="toggle" onclick="toggleForm()">ثبت‌نام نکردی؟ کلیک کن!</div>
+  </div>
 
-            <div id="signupBox" class="form-box" style="display: none;">
-              <h2>ثبت‌نام</h2>
-              <input type="email" id="signupEmail" placeholder="ایمیل">
-              <input type="password" id="signupPassword" placeholder="رمز عبور">
-              <button onclick="signupUser()">ثبت‌نام</button>
-              <div class="toggle" onclick="toggleForm()">حساب داری؟ ورود</div>
-            </div>
-          </section>
+  <div id="signupBox" class="form-box" style="display: none;">
+    <h2>ثبت‌نام</h2>
+    <input type="email" id="signupEmail" placeholder="ایمیل">
+    <input type="password" id="signupPassword" placeholder="رمز عبور">
+    <button onclick="signupUser()">ثبت‌نام</button>
+    <div class="toggle" onclick="toggleForm()">حساب داری؟ ورود</div>
+  </div>
+</section>
             <section class="categories">
              <h3 class="product-category-title">🛍 دسته‌بندی محصولات</h3>
                <div class="category-tabs">
@@ -807,23 +807,45 @@
         
                 </div>
               </div>
-<style>
-      .form-box h2 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #fff;
-      }
-      .category-tabs button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-        border-radius: 8px;
-      }
-      .category-tabs h3 {
-        font-size: 1.1rem;
-        color: #fff;
-      }
-    </style>
-          
+
+             
+<script>
+  // مقداردهی اولیه Firebase
+  const firebaseConfig = {
+    apiKey: "اینجا APIKEY پروژه‌ت",
+    authDomain: "your-project.firebaseapp.com",
+    projectId: "your-project",
+    appId: "APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  // توابع ورود و ثبت‌نام
+  function toggleForm() {
+    const login = document.getElementById('loginBox');
+    const signup = document.getElementById('signupBox');
+    login.style.display = login.style.display === 'none' ? 'block' : 'none';
+    signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function loginUser() {
+    const email = document.getElementById('loginEmail').value;
+    const pass = document.getElementById('loginPassword').value;
+    auth.signInWithEmailAndPassword(email, pass)
+      .then(user => alert('ورود موفق!'))
+      .catch(err => alert('خطا: ' + err.message));
+  }
+
+  function signupUser() {
+    const email = document.getElementById('signupEmail').value;
+    const pass = document.getElementById('signupPassword').value;
+    auth.createUserWithEmailAndPassword(email, pass)
+      .then(user => alert('ثبت‌نام موفق!'))
+      .catch(err => alert('خطا: ' + err.message));
+  }
+</script>
+              
 <style>
   .product-category { display: none; }
   .product-category.active { display: block; animation: fade 0.4s ease-in-out; }
@@ -847,7 +869,22 @@
     to { opacity: 1; transform: translateY(0); }
   }
 </style>
-
+<style>
+      .form-box h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .category-tabs button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+      }
+      .category-tabs h3 {
+        font-size: 1.1rem;
+        color: #fff;
+      }
+    </style>
 <script>
   const buttons = document.querySelectorAll('.category-tabs button');
   const categories = document.querySelectorAll('.product-category');
@@ -1689,7 +1726,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
         </article>
       </div>
 
-       <!-- Footer -->
+      <!-- Footer -->
       <footer id="footer"></footer>
     </div>
 
@@ -1707,8 +1744,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <link rel="stylesheet" href="assets/css/main.css" />
-<script src="assets/js/main.js"></script>
-     </body>
+  </body>
 </html>
