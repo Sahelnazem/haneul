@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Page Loaded!");
   // Initialize Firebase (using compat mode)
   firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+window.auth = auth; // برای استفاده در فایل‌های دیگه مثل main.js
   const db = firebase.firestore();
   console.log("Firebase Initialized!");
   // Handle Form Submission
