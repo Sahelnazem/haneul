@@ -404,15 +404,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   if (window.auth) {
     auth.onAuthStateChanged((user) => {
-      const cartBox = document.querySelector(".cart-slide");
-      if (cartBox) {
-        if (user) {
-          cartBox.style.display = "block";
-        } else {
-          cartBox.style.display = "none";
-        }
-      }
-    });
+      if (user) {
+    document.querySelector('.cart-slide').style.display = 'block';
+  } else {
+    document.querySelector('.cart-slide').style.display = 'none';
   }
 });
-
