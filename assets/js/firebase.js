@@ -59,3 +59,10 @@ auth.onAuthStateChanged(user => {
     document.querySelector('.cart-slide')?.style.setProperty("display", "none");
   }
 });
+function signupUser() {
+  const email = document.getElementById('signupEmail').value;
+  const pass = document.getElementById('signupPassword').value;
+  auth.createUserWithEmailAndPassword(email, pass)
+    .then(user => alert('ثبت‌نام موفق!'))
+    .catch(err => alert('خطا: ' + err.message));
+}
