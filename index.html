@@ -83,7 +83,25 @@
            محصولات با سه کیفیت قابل سفارش هستند.1.اصل 2.مسترکوالیتی 3.هایی کپی
           </p>
 <P> قیمت ها با احترام بدون باربری هستند.💕</P>
-         
+
+          <!-- فرم ورود / ثبت‌نام -->
+<section id="auth-section">
+  <div id="loginBox" class="form-box">
+    <h2>ورود به حساب</h2>
+    <input type="email" id="loginEmail" placeholder="ایمیل">
+    <input type="password" id="loginPassword" placeholder="رمز عبور">
+    <button onclick="loginUser()">ورود</button>
+    <div class="toggle" onclick="toggleForm()">ثبت‌نام نکردی؟ کلیک کن!</div>
+  </div>
+
+  <div id="signupBox" class="form-box" style="display: none;">
+    <h2>ثبت‌نام</h2>
+    <input type="email" id="signupEmail" placeholder="ایمیل">
+    <input type="password" id="signupPassword" placeholder="رمز عبور">
+    <button onclick="signupUser()">ثبت‌نام</button>
+    <div class="toggle" onclick="toggleForm()">حساب داری؟ ورود</div>
+  </div>
+</section>
             <section class="categories">
              <h3 class="product-category-title">🛍 دسته‌بندی محصولات</h3>
                <div class="category-tabs">
@@ -133,7 +151,7 @@
   <option>L</option>
 <option>XL</option></select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Denim Jacket', 108, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
                   <span class="image main"><img src="images/pic10.jpg" alt="" /></span>
@@ -147,7 +165,7 @@
     <option>one-size</option>
   </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Boho Women Hat', 22, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -170,7 +188,7 @@
 <option>XL</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Cardigan', 52, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
                   
@@ -187,7 +205,7 @@
   <option>L</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Coat and Skirt Set', 182, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -204,7 +222,7 @@
   <option>L</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Leather Jacket', 90, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -221,7 +239,7 @@
   <option>L</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Crop Coat', 80, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
                 </div>
@@ -246,7 +264,7 @@
   <option>XXL</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Men Jacket', 130, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -266,7 +284,7 @@
   <option>XXL</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Plain Men Overcoat', 141, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -291,7 +309,7 @@
   <option>XXL</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Cap', 19, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -312,7 +330,7 @@
   
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Hoodie Set', 128, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -333,7 +351,7 @@
  
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Leather Jacket', 151, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -354,7 +372,7 @@
   
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Men Jeans', 99, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -374,7 +392,7 @@
 </select>
 
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('TMiuMiu pink purse', 272, 'color1')">
   افزودن به سبد خرید
 </button>
 
@@ -391,7 +409,7 @@
 </select>
 
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Ysl bag', 650, 'color1')">
   افزودن به سبد خرید
 </button>
                 </div>
@@ -411,7 +429,7 @@
   
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Ring', 16, 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -427,7 +445,7 @@
   <option>10</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Ring', 14, 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -436,7 +454,7 @@
           <p>Necklace</p> 
           <p> price: 21,00AED </p>
        
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Necklace', 21 )">
   افزودن به سبد خرید
 </button>
 
@@ -446,7 +464,7 @@
           <p> price: 13,00AED </p>
       
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Necklase', 13 )">
   افزودن به سبد خرید
 </button>
 
@@ -456,7 +474,7 @@
           <p> price: 18,00AED </p>
         
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Necklace', 18 )">
   افزودن به سبد خرید
 </button>
 
@@ -469,7 +487,7 @@
   <option> تقره ای</option> 
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Women Watches', 18, 'color1')">
   افزودن به سبد خرید
 </button>
 
@@ -477,7 +495,7 @@
           <span class="image main"><img src="images/pic36.jpg" alt="" /></span> 
           <p>Ysl sunglasses</p> 
 <P>price:€ 226 </P>
-          <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+          <button class="add-to-cart" onclick="addToCart('Ysl sunglasses', 226)">
   افزودن به سبد خرید
 </button>
 
@@ -486,7 +504,7 @@
           <span class="image main"><img src="images/pic38.jpg" alt="" /></span> 
           <p>Dior sunglasses</p> 
           <P>price:$ 440 </P>
-          <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+          <button class="add-to-cart" onclick="addToCart('Dior sunglasses', 440)">
   افزودن به سبد خرید
 </button>
 
@@ -494,7 +512,7 @@
           <span class="image main"><img src="images/pic39.jpg" alt="" /></span> 
           <p>Miu Miu sunglasses</p> 
           <P>price: 601 $ </P>
-         <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+         <button class="add-to-cart" onclick="addToCart('Miu Miu sunglasses', 601)">
   افزودن به سبد خرید
 </button>
 
@@ -502,7 +520,7 @@
           <span class="image main"><img src="images/pic40.jpg" alt="" /></span> 
           <p>Dior sunglasses</p> 
           <P>price: 390 $ </P>
-         <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+         <button class="add-to-cart" onclick="addToCart('Dior sunglasses', 390)">
   افزودن به سبد خرید
 </button>
 
@@ -510,7 +528,7 @@
           <span class="image main"><img src="images/pic41.jpg" alt="" /></span> 
           <p>Bvlgari sunglasses</p>
           <P>price: 600 $ </P>
-          <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+          <button class="add-to-cart" onclick="addToCart('Bvlgari sunglasses', 600)">
   افزودن به سبد خرید
 </button>
 
@@ -541,7 +559,7 @@
    <option>EU 42</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('sl heels', 1,200, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -567,7 +585,7 @@
    <option>EU 42</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Ysl heels', 1,200, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -594,7 +612,7 @@
    <option>EU 42</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Match Match heels', 995, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
@@ -624,14 +642,14 @@
    <option>EU 42</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('Givenchy Shark Boots', 1,950, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
 
                                       <span class="image main"><img src="images/pic34.jpg" alt="" /></span> 
           <span class="image main"><img src="images/pic35.jpg" alt="" /></span> 
           <p>LouboutinRedBottoms heels</p>
-          <P>price: $ 695 </P>
+          <P>price: $ 2,400 </P>
          <select id="color1">
                   <option> مشکی </option>
            
@@ -649,7 +667,7 @@
    <option>EU 42</option>
 </select>
 
-<button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+<button class="add-to-cart" onclick="addToCart('LouboutinRedBottoms heels', 2.400, 'color1', 'size1')">
   افزودن به سبد خرید
 </button>
                 </div>
@@ -662,7 +680,7 @@
                   <span class="image main"><img src="images/pic72.jpg" alt="" /></span> 
           <P>Ysl Libre Le</P> 
           <P>price:170.00 $</P>
-         <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+         <button class="add-to-cart" onclick="addToCart('Ysl Libre Le', 170)">
   افزودن به سبد خرید
 </button>
 
@@ -670,49 +688,49 @@
           <span class="image main"><img src="images/pic74.jpg" alt="" /></span> 
           <P>Libre De Intense</P> 
   <P>price:100.00 $</P>
-                 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                 <button class="add-to-cart" onclick="addToCart('Libre De Intense', 100)">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic75.jpg" alt="" /></span> 
           <P>Christian Dior feve delicious perfume</P> 
   <P>price:280.00 $</P>
-               <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+               <button class="add-to-cart" onclick="addToCart('Christian Dior feve delicious perfume', 280)">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic76.jpg" alt="" /></span> 
           <P>Dior Jadore perfume</P> 
   <P>price:305.00 $</P>
-                  <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                  <button class="add-to-cart" onclick="addToCart('Dior Jadore perfume', 305)">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic77.jpg" alt="" /></span> 
           <P> Miss dior perfume</P> 
   <P>price:215.00 $</P>
-                 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                 <button class="add-to-cart" onclick="addToCart('Miss dior perfume', 215)">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic78.jpg" alt="" /></span> 
           <P>Burberry her perfume</P> 
           <P>price:138.00 $</P>
-          <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+          <button class="add-to-cart" onclick="addToCart('Burberry her perfume', 138')">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic79.jpg" alt="" /></span> 
           <P>Mon paris ysl</P> 
           <P>price:120.00 $</P>
-          <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+          <button class="add-to-cart" onclick="addToCart('Mon paris ysl', 120)">
   افزودن به سبد خرید
 </button>
 
           <span class="image main"><img src="images/pic80.jpg" alt="" /></span> 
           <P>Coco chanel</P>
   <P>price:94.00$ </P>
-               <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+               <button class="add-to-cart" onclick="addToCart('Coco chanel', 94)">
   افزودن به سبد خرید
 </button>
 
@@ -726,35 +744,35 @@
                   <span class="image main"><img src="images/pic62.jpg" alt="" /></span> 
                   <P>Dior blush</P> 
                   <P>price:55.00 $</P>
-                 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                 <button class="add-to-cart" onclick="addToCart('Dior blush', 55)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic63.jpg" alt="" /></span> 
                   <P>Rare beauty creme blush</P> 
                   <P>price:24.00 $ </P>
-                  <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                  <button class="add-to-cart" onclick="addToCart('Rare beauty creme blush', 24)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic64.jpg" alt="" /></span> 
                   <P>Gisuo lip oil</P> 
                   <P>price:€ 28.00</P>
-               <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+               <button class="add-to-cart" onclick="addToCart('Gisuo lip oil', 28)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic65.jpg" alt="" /></span> 
                   <P>Dior lip oil</P> 
                   <P>price:10.00 $</P>
-                <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                <button class="add-to-cart" onclick="addToCart('Dior lip oil', 10)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic66.jpg" alt="" /></span> 
                   <P>Dior addict lip gloss</P> 
                   <P>price:54.00 $</P>
-                 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                 <button class="add-to-cart" onclick="addToCart('Dior addict lip gloss', 54)">
   افزودن به سبد خرید
 </button>
 
@@ -762,34 +780,75 @@
                   <span class="image main"><img src="images/pic68.jpg" alt="" /></span> 
                   <P>Dior Glow addict lip balm</P> 
                   <P>price:54.00 $</P>
-                  <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                  <button class="add-to-cart" onclick="addToCart('Dior Glow addict lip balm', 54)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic69.jpg" alt="" /></span> 
                   <P>Rhode lip gloss</P> 
                   <P>price:18.00 $</P>
-                <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                <button class="add-to-cart" onclick="addToCart('Rhode lip gloss', 18)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic70.jpg" alt="" /></span> 
                   <P>KiKo lip gloss</P> 
                   <P>price:13.50 $</P>
-               <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+               <button class="add-to-cart" onclick="addToCart('KiKo lip gloss', 13.50)">
   افزودن به سبد خرید
 </button>
 
                   <span class="image main"><img src="images/pic71.jpg" alt="" /></span> 
                   <P>Dior Addict Lipstick</P> 
                   <P>price:50.00 $</P>
-                 <button class="add-to-cart" onclick="addToCart('Trench Coat', 153, 'color1', 'size1')">
+                 <button class="add-to-cart" onclick="addToCart('Dior Addict Lipstick', 50)">
   افزودن به سبد خرید
 </button>
         
                 </div>
               </div>
-       
+
+              <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+<script>
+  // مقداردهی اولیه Firebase
+  const firebaseConfig = {
+    apiKey: "اینجا APIKEY پروژه‌ت",
+    authDomain: "your-project.firebaseapp.com",
+    projectId: "your-project",
+    appId: "APP_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  // توابع ورود و ثبت‌نام
+  function toggleForm() {
+    const login = document.getElementById('loginBox');
+    const signup = document.getElementById('signupBox');
+    login.style.display = login.style.display === 'none' ? 'block' : 'none';
+    signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function loginUser() {
+    const email = document.getElementById('loginEmail').value;
+    const pass = document.getElementById('loginPassword').value;
+    auth.signInWithEmailAndPassword(email, pass)
+      .then(user => alert('ورود موفق!'))
+      .catch(err => alert('خطا: ' + err.message));
+  }
+
+  function signupUser() {
+    const email = document.getElementById('signupEmail').value;
+    const pass = document.getElementById('signupPassword').value;
+    auth.createUserWithEmailAndPassword(email, pass)
+      .then(user => alert('ثبت‌نام موفق!'))
+      .catch(err => alert('خطا: ' + err.message));
+  }
+</script>
+              
 <style>
   .product-category { display: none; }
   .product-category.active { display: block; animation: fade 0.4s ease-in-out; }
