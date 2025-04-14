@@ -1738,13 +1738,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
       .catch(err => alert('خطا: ' + err.message));
   }
 
-  function signupUser() {
-  const email = document.getElementById('signupEmail').value;
-  const pass = document.getElementById('signupPassword').value;
-  auth.createUserWithEmailAndPassword(email, pass)
-    .then(user => alert('ثبت‌نام موفق!'))
-    .catch(err => alert('خطا: ' + err.message));
-}
+ 
 </script>
+     <!-- اسکریپت‌های پروژه -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
