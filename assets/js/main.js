@@ -399,14 +399,3 @@
 					});
 
 })(jQuery);
-
-// نمایش سبد خرید فقط برای کاربران واردشده
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.auth) {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-    document.querySelector('.cart-slide').style.display = 'block';
-  } else {
-    document.querySelector('.cart-slide').style.display = 'none';
-  }
-});
