@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Page Loaded!");
   // Initialize Firebase (using compat mode)
   firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
 window.auth = auth; 
   const db = firebase.firestore();
   console.log("Firebase Initialized!");
@@ -48,21 +47,3 @@ window.auth = auth;
     });
 });
 
-// Initialize Firebase Auth globally
-const auth = firebase.auth();
-
-// Handle auth state change
-auth.onAuthStateChanged(user => {
-  if (user) {
-    document.querySelector('.cart-slide')?.style.setProperty("display", "block");
-  } else {
-    document.querySelector('.cart-slide')?.style.setProperty("display", "none");
-  }
-});
-function signupUser() {
-  const email = document.getElementById('signupEmail').value;
-  const pass = document.getElementById('signupPassword').value;
-  auth.createUserWithEmailAndPassword(email, pass)
-    .then(user => alert('ثبت‌نام موفق!'))
-    .catch(err => alert('خطا: ' + err.message));
-}
