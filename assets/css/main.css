@@ -1825,3 +1825,10 @@ input, select, textarea {
   color: #eee;
   cursor: pointer;
 }
+.login-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
