@@ -47,3 +47,17 @@ window.auth = auth;
     });
 });
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDoJvJvCilO95H8ujLKIR3kelgt6AFVDiU",
+  authDomain: "haneul-ad6d7.firebaseapp.com",
+  projectId: "haneul-ad6d7",
+  storageBucket: "haneul-ad6d7.firebasestorage.app",
+  messagingSenderId: "589780360585",
+  appId: "1:589780360585:web:3b8487a173d70b1328d558",
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
