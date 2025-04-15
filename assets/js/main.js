@@ -399,18 +399,4 @@
 					});
 
 })(jQuery);
-import { auth } from './firebase.js';
 
-document.getElementById("login-btn").addEventListener("click", async (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    alert("با موفقیت وارد شدید");
-    // اینجا مثلا cart رو نشون بده یا بری به صفحه دیگه
-  } catch (error) {
-    alert("خطا در ورود: " + error.message);
-  }
-});
